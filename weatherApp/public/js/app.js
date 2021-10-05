@@ -2054,6 +2054,29 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CitiesComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CitiesComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Cities"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -2116,10 +2139,240 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      cities: []
+      testCities: [{
+        "id": 1,
+        "name": "Tirana\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 2,
+        "name": "Andorra la Vella\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 3,
+        "name": "Vienna\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 4,
+        "name": "Minsk\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 5,
+        "name": "Brussels\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 6,
+        "name": "Sarajevo\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 7,
+        "name": "Sofia\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 8,
+        "name": "Zagreb\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 9,
+        "name": "Prague\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 10,
+        "name": "Copenhagen\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 11,
+        "name": "Tallinn\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 12,
+        "name": "Helsinki\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 13,
+        "name": "Paris\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 14,
+        "name": "Berlin\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 15,
+        "name": "Athens\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 16,
+        "name": "Budapest\r\n",
+        "created_at": "2021-10-04T08:34:38.000000Z",
+        "updated_at": "2021-10-04T08:34:38.000000Z"
+      }, {
+        "id": 17,
+        "name": "Reykjavik\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 18,
+        "name": "Dublin\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 19,
+        "name": "Rome\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 20,
+        "name": "Riga\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 21,
+        "name": "Vaduz\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 22,
+        "name": "Vilnius\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 23,
+        "name": "Luxembourg\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 24,
+        "name": "Valletta\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 25,
+        "name": "Chisinau\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 26,
+        "name": "Monaco\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 27,
+        "name": "Podgorica\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 28,
+        "name": "Amsterdam Haag\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 29,
+        "name": "Skopje\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 30,
+        "name": "Oslo\r\n",
+        "created_at": "2021-10-04T08:34:39.000000Z",
+        "updated_at": "2021-10-04T08:34:39.000000Z"
+      }, {
+        "id": 31,
+        "name": "Warsaw\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 32,
+        "name": "Lisbon\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 33,
+        "name": "Bucharest\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 34,
+        "name": "Moscow\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 35,
+        "name": "San Marino\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 36,
+        "name": "Belgrade\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 37,
+        "name": "Bratislava\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 38,
+        "name": "Ljubljana\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 39,
+        "name": "Madrid\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 40,
+        "name": "Stockholm\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 41,
+        "name": "Bern\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 42,
+        "name": "Kiev\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }, {
+        "id": 43,
+        "name": "London\r\n",
+        "created_at": "2021-10-04T08:34:40.000000Z",
+        "updated_at": "2021-10-04T08:34:40.000000Z"
+      }],
+      selectedCity: null
     };
   },
-  props: ['test']
+  props: ['test'],
+  mounted: function mounted() {
+    var th = this;
+    axios.get("http://127.0.0.1:8000/api/cities").then(function (res) {
+      th.testCities = res.data;
+      console.log(th.testCities);
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  },
+  methods: {
+    greet: function greet() {
+      alert(12);
+    }
+  }
 });
 
 /***/ }),
@@ -2150,6 +2403,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('subscription-component', __webpack_require__(/*! ./components/SubscriptionComponent.vue */ "./resources/js/components/SubscriptionComponent.vue")["default"]);
+Vue.component('cities-component', __webpack_require__(/*! ./components/CitiesComponent.vue */ "./resources/js/components/CitiesComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -37589,6 +37843,45 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./resources/js/components/CitiesComponent.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/CitiesComponent.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _CitiesComponent_vue_vue_type_template_id_69823619___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CitiesComponent.vue?vue&type=template&id=69823619& */ "./resources/js/components/CitiesComponent.vue?vue&type=template&id=69823619&");
+/* harmony import */ var _CitiesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CitiesComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/CitiesComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CitiesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CitiesComponent_vue_vue_type_template_id_69823619___WEBPACK_IMPORTED_MODULE_0__.render,
+  _CitiesComponent_vue_vue_type_template_id_69823619___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CitiesComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue":
 /*!******************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue ***!
@@ -37667,6 +37960,22 @@ component.options.__file = "resources/js/components/SubscriptionComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/CitiesComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/CitiesComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CitiesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CitiesComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CitiesComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CitiesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -37696,6 +38005,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SubscriptionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SubscriptionComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/SubscriptionComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SubscriptionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CitiesComponent.vue?vue&type=template&id=69823619&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/CitiesComponent.vue?vue&type=template&id=69823619& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CitiesComponent_vue_vue_type_template_id_69823619___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CitiesComponent_vue_vue_type_template_id_69823619___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CitiesComponent_vue_vue_type_template_id_69823619___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CitiesComponent.vue?vue&type=template&id=69823619& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CitiesComponent.vue?vue&type=template&id=69823619&");
+
 
 /***/ }),
 
@@ -37729,6 +38055,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SubscriptionComponent_vue_vue_type_template_id_0ca26305___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SubscriptionComponent_vue_vue_type_template_id_0ca26305___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SubscriptionComponent.vue?vue&type=template&id=0ca26305& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/SubscriptionComponent.vue?vue&type=template&id=0ca26305&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CitiesComponent.vue?vue&type=template&id=69823619&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/CitiesComponent.vue?vue&type=template&id=69823619& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-6 " }, [
+      _c("h3", [_vm._v("Subscriptions:")])
+    ])
+  }
+]
+render._withStripped = true
+
 
 
 /***/ }),
@@ -37802,10 +38162,33 @@ var render = function() {
       _c(
         "select",
         {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedCity,
+              expression: "selectedCity"
+            }
+          ],
           staticClass: "form-control",
-          attrs: { name: "ddlCities", id: "ddlCities" }
+          attrs: { name: "ddlCities", id: "ddlCities" },
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.selectedCity = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
         },
-        _vm._l(_vm.cities, function(city) {
+        _vm._l(_vm.testCities, function(city) {
           return _c("option", { key: city.id, domProps: { value: city.id } }, [
             _vm._v("\n                " + _vm._s(city.name) + "\n            ")
           ])
@@ -37815,7 +38198,11 @@ var render = function() {
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary", attrs: { id: "btnSubscribe" } },
+        {
+          staticClass: "btn btn-primary",
+          attrs: { id: "btnSubscribe" },
+          on: { click: _vm.greet }
+        },
         [_vm._v("Subscribe")]
       )
     ])

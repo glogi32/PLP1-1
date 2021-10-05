@@ -21,6 +21,7 @@
     </div>
     <div class="row mt-5" id="testApp">
         <subscription-component test="pero"></subscription-component>
+        <cities-component></cities-component>
     </div>
 </div>
 @endsection

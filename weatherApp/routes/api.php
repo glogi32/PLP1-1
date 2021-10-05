@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get("/cities",[CityController::class,"index"]);
+Route::post("/subscribtion",[CityController::class,"subscribeUser"]);
+Route::get("/user-cities",[CityController::class,"getUserCities"]);
