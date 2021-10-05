@@ -18,4 +18,9 @@ class City extends Model
     {
         return $this->hasMany(Weather::class);
     }
+
+    public function weatherToday()
+    {
+       return $this->hasMany(Weather::class)->whereDate("created_at",date("Y-m-d"));
+    }
 }

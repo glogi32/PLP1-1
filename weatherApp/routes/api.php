@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\Api\WeatherController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get("/cities",[CityController::class,"index"]);
 Route::post("/subscribtion",[CityController::class,"subscribeUser"]);
+Route::delete("/unsubscribe",[CityController::class,"unsubscribeUser"]);
 Route::get("/user-cities",[CityController::class,"getUserCities"]);
+Route::get("/city-weather",[WeatherController::class,"getWeatherByUserName"]);

@@ -16,6 +16,7 @@ class CityController extends Controller
 {
     public function index()
     {
+      
         return City::all();
     }
 
@@ -59,7 +60,7 @@ class CityController extends Controller
         ]);
 
         $userId = $request->userId;
-        
+
         $http = new Client();
         $requestT = $http->get("https://api.openweathermap.org/data/2.5/weather?q=Belgrade&appid=283ffcd4756f546f71f2e37f52c59bd9&units=metric");
         return json_decode($requestT->getBody()->getContents());
@@ -69,5 +70,32 @@ class CityController extends Controller
         return City::whereHas("users",function($query) use($userId){
             return $query->where("user_id",$userId);
         })->get();
+    }
+
+    public function unsubscribeUser(Request $request)
+    {
+        $validated = $request->validate([
+            'userCityId' => ["required","integer","exists:user_cities,id"],
+            "userId" => ["required","integer","exists:users,id"]
+        ]);
+
+        $userCity = UserCity::where([
+            ["user_id","=",$request->userId],
+            ["id","=",$request->userCiryId]
+        ]);
+
+        if(!$userCity){
+            return response(["message" => "Not found"],404);
+        }
+
+        try {
+            $userCity->delete();
+            return response(["message" => "You successfully unsubscribed"],404);
+        } catch (\Throwable $th) {
+            Log::error($th->getMessage());
+            return response(["message" => "Server error, try again later"],500);
+        }
+
+
     }
 }

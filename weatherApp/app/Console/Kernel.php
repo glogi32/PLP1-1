@@ -9,6 +9,7 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use Illuminate\Support\Facades\Log;
 use App\Console\Commands\AddWeatherCommand;
+use App\Console\Commands\SendWeatherDataMailCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -31,7 +32,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->command(AddWeatherCommand::class)->daily();
-
+        $schedule->command(SendWeatherDataMailCommand::class)->everyMinute();
     }
 
     /**
