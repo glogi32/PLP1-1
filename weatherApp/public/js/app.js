@@ -2370,7 +2370,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     greet: function greet() {
-      alert(12);
+      alert(123);
     }
   }
 });
@@ -38201,7 +38201,11 @@ var render = function() {
         {
           staticClass: "btn btn-primary",
           attrs: { id: "btnSubscribe" },
-          on: { click: _vm.greet }
+          on: {
+            click: function($event) {
+              return _vm.greet()
+            }
+          }
         },
         [_vm._v("Subscribe")]
       )

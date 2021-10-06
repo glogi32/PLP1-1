@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 style="margin: 15px auto;">Wellcome to Weather App</h2>
+    <h2 style="width: 50%; margin: 15px auto; text-align: center;">Wellcome to Weather App</h2>
+    <h3 style="width: 50%; margin: 15px auto; text-align: center;">Weather info for date: {{date("d-m-Y",strtotime($userCities[0]->weatherToday[0]->created_at))}}</h3>
     
     @foreach ($userCities as $city)
         <div style="width: 500px; background-color: beige; margin: 15px auto; padding: 10px;">

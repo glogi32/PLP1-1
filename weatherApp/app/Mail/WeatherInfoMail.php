@@ -42,10 +42,10 @@ class WeatherInfoMail extends Mailable
                 $temp = (float)$city->weatherToday[0]->temp;
                 switch ($temp) {
                     case ($temp > 22):
-                        $city->advice = "Shorts and short-sleeve jersey.";
+                        $city->advice = "Anything that makes you feel comfortable";
                         break;
                     case ($temp <= 22 && $temp > 15.5):
-                        $city->advice = "Shorts and long-sleeve jersey or long-sleeve thin undershirt.";
+                        $city->advice = "Shorts and short-sleeve jersey.";
                         break;
                     case ($temp <= 15.5 && $temp > 10):
                         $city->advice = "Shorts and long-sleeve jersey or long-sleeve thin undershirt.";
