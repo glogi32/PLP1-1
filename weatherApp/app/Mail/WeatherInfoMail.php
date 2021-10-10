@@ -35,6 +35,7 @@ class WeatherInfoMail extends Mailable
         $userCities = City::with("weatherToday")->whereHas("users",function($q){
             return $q->where("user_id",$this->userId);
         })->get();
+        
         foreach ($userCities as $city) {
 
             if(!empty($city->weatherToday[0])){

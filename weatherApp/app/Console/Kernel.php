@@ -20,6 +20,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         AddWeatherCommand::class,
+        SendWeatherDataMailCommand::class
     ];
 
     /**

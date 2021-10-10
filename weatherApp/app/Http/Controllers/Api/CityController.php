@@ -16,11 +16,7 @@ class CityController extends Controller
 {
     public function index()
     {
-        $userCities = City::with("weatherToday")->whereHas("users",function($q){
-            return $q->where("user_id",1);
-        })->get();
-
-        dd($userCities);
+        
         return City::all();
     }
 
