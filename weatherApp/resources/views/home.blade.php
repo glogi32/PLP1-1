@@ -12,16 +12,17 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
+                        
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <input type="hidden" id="userId" value="{{Auth::user()->id}}">
                 </div>
             </div>
         </div>
     </div>
-    <div class="row mt-5" id="testApp">
-        <subscription-component test="pero"></subscription-component>
-        <cities-component></cities-component>
+    <div  id="testApp">
+        <content-component></content-component>
     </div>
 </div>
 @endsection

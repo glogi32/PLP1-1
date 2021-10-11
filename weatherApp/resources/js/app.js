@@ -6,7 +6,11 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue').default;
+import Vue from 'vue';
+import Axios from 'axios';
+
+window.axios = Axios;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,14 +25,16 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('subscription-component', require('./components/SubscriptionComponent.vue').default);
-Vue.component('cities-component', require('./components/CitiesComponent.vue').default);
-
+Vue.component('cities-component', require('./components/CitiesComponent.vue').default); 
+Vue.component("content-component",require('./components/ContentComponent.vue').default);
+Vue.component("search-weather-component",require('./components/SearchWeatherComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+new Vue({
     el: '#testApp'
-});
+}); 
+

@@ -36,7 +36,7 @@ class CityController extends Controller
 
         $userSubscriptions = UserCity::where("user_id",$userId)->count();
 
-        if($userSubscriptions > 10){
+        if($userSubscriptions >= 10){
             return response(["message" => "Conflict","errors" => ["You can subscribe to maximum 10 cities."]],409);
         }
 
@@ -46,7 +46,8 @@ class CityController extends Controller
 
         try {
             $newUserCity->save();
-            return response(["message" => "You successfully subscribed to selected city."]);
+            $userCity = City::with("users")->find($newUserCity->city_id);
+            return response(["message" => "You successfully subscribed to selected city.", "data" => $userCity]);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return response(["message" => "Server error, try again later."],500);
@@ -61,8 +62,9 @@ class CityController extends Controller
 
         $userId = $request->userId;
         
+        
 
-        return City::whereHas("users",function($query) use($userId){
+        return City::with("users")->whereHas("users",function($query) use($userId){
             return $query->where("user_id",$userId);
         })->get();
     }
@@ -75,7 +77,7 @@ class CityController extends Controller
 
         $userCity = UserCity::where([
             ["user_id","=",$request->userId],
-            ["id","=",$request->userCityId]
+            ["city_id","=",$request->cityId]
         ])->first();
 
         if(!$userCity){
@@ -84,7 +86,7 @@ class CityController extends Controller
 
         try {
             $userCity->delete();
-            return response(["message" => "You successfully unsubscribed"],200);
+            return response(["message" => "You successfully unsubscribed"],204);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return response(["message" => "Server error, try again later"],500);
