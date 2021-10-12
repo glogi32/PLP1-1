@@ -6,12 +6,19 @@
                     {{ city.name }}
                 </option>
             </select>
-            <button id="btnSubscribe" class="btn btn-primary"  v-on:click="subscribe"  >Subscribe</button>
-            <div v-if="errors" class="alert alert-danger mt-3" role="alert">
-                <ul>
-                    <li v-for="err in errors" v-bind:key="err">{{err}}</li>
-                </ul>
-            </div>
+            <button id="btnSubscribe" class="btn btn-primary"  v-on:click="subscribe">Subscribe</button>
+            <div v-if="errors" class="alert alert-danger mt-3 p-0" role="alert">
+            <ul class="ml-3 p-2">
+                <li v-for="(err,name) in errors" v-bind:key="name">
+                    <ul v-if="err.length" class="ml-2 p-2">
+                        <p>{{name}}</p>
+                        <li v-for="(e,ind) in err" v-bind:key="ind">
+                            {{e}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
         </div>
     </div>
 </template>
@@ -35,6 +42,7 @@ export default {
     },
     methods : {
         subscribe : function(){
+            this.errors = null;
             axios.post("http://127.0.0.1:8000/api/subscribtion",{
                 userId : this.userId,
                 cityId : this.selectedCityId

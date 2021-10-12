@@ -2077,6 +2077,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Cities",
   props: {
@@ -2238,12 +2241,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Search",
   data: function data() {
     return {
       keyword: "",
-      cities: []
+      cities: [],
+      errors: null
     };
   },
   methods: {
@@ -2259,7 +2276,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.cities = res.data;
         console.log(_this.cities);
       })["catch"](function (err) {
-        console.log(err);
+        _this.errors = err.response.data.errors;
       });
     }
   }
@@ -2296,6 +2313,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Subscription",
   data: function data() {
@@ -2314,6 +2338,7 @@ __webpack_require__.r(__webpack_exports__);
     subscribe: function subscribe() {
       var _this = this;
 
+      this.errors = null;
       axios.post("http://127.0.0.1:8000/api/subscribtion", {
         userId: this.userId,
         cityId: this.selectedCityId
@@ -38226,7 +38251,11 @@ var render = function() {
           }),
           0
         )
-      : _vm._e()
+      : _c(
+          "div",
+          { staticClass: "alert alert-info mt-3", attrs: { role: "alert" } },
+          [_vm._v("\n        You are not subscribed to cities.\n    ")]
+        )
   ])
 }
 var staticRenderFns = []
@@ -38366,6 +38395,45 @@ var render = function() {
       }
     }),
     _vm._v(" "),
+    _vm.errors
+      ? _c(
+          "div",
+          { staticClass: "alert alert-danger mt-3", attrs: { role: "alert" } },
+          [
+            _c(
+              "ul",
+              _vm._l(_vm.errors, function(err, name) {
+                return _c("li", { key: err }, [
+                  err.length
+                    ? _c(
+                        "ul",
+                        [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(name) +
+                              "\n                        "
+                          ),
+                          _vm._l(err, function(e) {
+                            return _c("li", { key: e }, [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(e) +
+                                  "\n                        "
+                              )
+                            ])
+                          })
+                        ],
+                        2
+                      )
+                    : _vm._e()
+                ])
+              }),
+              0
+            )
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
     _c(
       "button",
       { staticClass: "btn btn-primary", on: { click: _vm.searchWeather } },
@@ -38383,27 +38451,38 @@ var render = function() {
               [
                 _c("h5", [_vm._v(_vm._s(city.name))]),
                 _vm._v(" "),
-                _c("ul", [
-                  _c("li", [_vm._v("Temp: " + _vm._s(city.weather[0].temp))]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _vm._v("Min temp: " + _vm._s(city.weather[0].temp_max))
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _vm._v("Max temp: " + _vm._s(city.weather[0].temp_min))
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _vm._v("Humidity: " + _vm._s(city.weather[0].humidity))
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _vm._v(
-                      "Description: " + _vm._s(city.weather[0].description)
-                    )
-                  ])
-                ])
+                city.weather_today.length
+                  ? _c("ul", [
+                      _c("li", [
+                        _vm._v("Temp: " + _vm._s(city.weather_today[0].temp))
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _vm._v(
+                          "Min temp: " + _vm._s(city.weather_today[0].temp_max)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _vm._v(
+                          "Max temp: " + _vm._s(city.weather_today[0].temp_min)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _vm._v(
+                          "Humidity: " + _vm._s(city.weather_today[0].humidity)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _vm._v(
+                          "Description: " +
+                            _vm._s(city.weather_today[0].description)
+                        )
+                      ])
+                    ])
+                  : _c("p", [_vm._v("No data for this day.")])
               ]
             )
           }),
@@ -38488,14 +38567,36 @@ var render = function() {
         ? _c(
             "div",
             {
-              staticClass: "alert alert-danger mt-3",
+              staticClass: "alert alert-danger mt-3 p-0",
               attrs: { role: "alert" }
             },
             [
               _c(
                 "ul",
-                _vm._l(_vm.errors, function(err) {
-                  return _c("li", { key: err }, [_vm._v(_vm._s(err))])
+                { staticClass: "ml-3 p-2" },
+                _vm._l(_vm.errors, function(err, name) {
+                  return _c("li", { key: name }, [
+                    err.length
+                      ? _c(
+                          "ul",
+                          { staticClass: "ml-2 p-2" },
+                          [
+                            _c("p", [_vm._v(_vm._s(name))]),
+                            _vm._v(" "),
+                            _vm._l(err, function(e, ind) {
+                              return _c("li", { key: ind }, [
+                                _vm._v(
+                                  "\n                        " +
+                                    _vm._s(e) +
+                                    "\n                    "
+                                )
+                              ])
+                            })
+                          ],
+                          2
+                        )
+                      : _vm._e()
+                  ])
                 }),
                 0
               )

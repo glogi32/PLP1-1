@@ -7,6 +7,9 @@
                 <button class=" btn-danger float-right" @click="onDelete(city.id)">Delete</button>
             </div>
         </div>
+        <div class="alert alert-info mt-3" v-else role="alert">
+            You are not subscribed to cities.
+        </div>
     </div>
 </template>
 

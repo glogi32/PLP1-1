@@ -31,13 +31,13 @@ class CityController extends Controller
         ])->first();
 
         if($subscribedCity){
-            return response(["message" => "Conflict","errors" => ["You have already subscribed to this city."]],409);
+            return response(["message" => "Conflict","errors" => ["Message" => ["You have already subscribed to this city."]]],409);
         }
 
         $userSubscriptions = UserCity::where("user_id",$userId)->count();
 
         if($userSubscriptions >= 10){
-            return response(["message" => "Conflict","errors" => ["You can subscribe to maximum 10 cities."]],409);
+            return response(["message" => "Conflict","errors" => ["Message" => ["You can subscribe to maximum 10 cities."]] ],409);
         }
 
         $newUserCity = new UserCity();
@@ -47,7 +47,7 @@ class CityController extends Controller
         try {
             $newUserCity->save();
             $userCity = City::with("users")->find($newUserCity->city_id);
-            return response(["message" => "You successfully subscribed to selected city.", "data" => $userCity]);
+            return response(["message" => "You successfully subscribed to selected city.", "data" => $userCity],201);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return response(["message" => "Server error, try again later."],500);

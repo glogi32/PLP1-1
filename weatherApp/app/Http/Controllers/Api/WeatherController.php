@@ -10,9 +10,13 @@ class WeatherController extends Controller
 {
     public function getWeatherByUserName(Request $request)
     {
+        $request->validate([
+            'name' => 'required|string'
+        ]);
+
         $username = $request->name;
 
-        return City::with("weather")->whereHas("users",function($q) use($username){
+        return City::with("weatherToday")->whereHas("users",function($q) use($username){
             return $q->where("users.name","like","%".$username."%");
         })->get();
     }
